@@ -341,7 +341,6 @@ p.followBio{
 	border-radius:5px;
 	height: 10px;
 	/* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) */
-	
 }
 ::-webkit-scrollbar-track{
 	background: white;
@@ -403,9 +402,7 @@ p.followBio{
 .container2{
     text-align: center;
 }
-.center{
-    border: 1px solid red;
-}
+
     .flexCon{
     margin:0px;
     margin-top: 10px;
