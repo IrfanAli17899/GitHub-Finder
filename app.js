@@ -42,10 +42,12 @@ function checkUserData(user) {
         user.avatar_url = './images/user.png'
     }if (user.avatar_url === null || user.avatar_url === undefined) {
         user.avatar_url = './images/user.png'
-    }if (user.follower === null || user.follower === undefined) {
+    }if (user.followers === null || user.followers === undefined) {
         user.follower = 0;
     }if (user.following === null || user.following === undefined) {
         user.following = 0;
+    }if (user.public_repos === null || user.public_repos === undefined) {
+        user.public_repos = 0;
     }
     return user;
 }
@@ -133,18 +135,19 @@ async function createFollower(link) {
     check();
     let followersRes = await fetch(link);
     let followers = await followersRes.json();
-    for (let i in followers) {
-        let followerRes = await fetch(followers[i].url);
-        let follower = await followerRes.json();
-        followHtml(follower);
-    }
     var span = document.createElement('span');
     span.innerHTML = `
         <button type="button" onclick="location.reload()" class="fixBtn">
             <i class="fa fa-search"></i> Search
         </button>`
-
     document.body.appendChild(span)
+    document.body.classList+=`center`
+    for (let i in followers) {
+        let followerRes = await fetch(followers[i].url);
+        let follower = await followerRes.json();
+        followHtml(follower);
+    }
+    
 
 }
 

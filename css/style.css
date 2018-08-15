@@ -1,5 +1,6 @@
 html,body{
     height: 100%;
+    width:100%;
     margin: 0;
 }
 
@@ -14,9 +15,9 @@ body{
 .container{
     min-height:100%;
     text-align: center;
-    /* background: radial-gradient(circle,rgb(55, 186, 238),rgb(21, 125, 167)) */
     background: radial-gradient(circle,rgb(255, 255, 255),rgb(184, 184, 184));
     background-position: center;
+    background-size:cover;
     
 
 }
@@ -56,7 +57,9 @@ body{
 .flexCon{
     display: inline-block;
     margin:3%;
-    
+}
+.center{
+    text-align: center;
 }
 .user{
     width: 300px;
@@ -162,7 +165,8 @@ p.followBio{
 
 .container1{
     min-height: 100%;
-    background: radial-gradient(circle,rgb(255, 255, 255),rgb(233, 233, 233))
+    background: radial-gradient(circle,rgb(255, 255, 255),rgb(233, 233, 233));
+    background-size:cover; 
 }
 .gitUser{
     position: absolute;top: 50%;
@@ -271,7 +275,7 @@ p.followBio{
 
 .data{
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -398,6 +402,9 @@ p.followBio{
 @media (max-width:370px){
 .container2{
     text-align: center;
+}
+.center{
+    border: 1px solid red;
 }
     .flexCon{
     margin:0px;
